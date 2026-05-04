@@ -169,18 +169,6 @@ All results are written to `results/`. The two large files (`results/main_evalua
 
 ---
 
-## Paper
-
-`paper/main.tex` is the full IEEE conference paper. Compile with:
-
-```bash
-pdflatex paper/main.tex && bibtex paper/main && pdflatex paper/main.tex && pdflatex paper/main.tex
-```
-
-Requires IEEEtran.cls (available from [IEEE](https://www.ieee.org/conferences/publishing/templates.html)).
-
----
-
 ## References
 
 - Ayub & Majumdar (2024) — arXiv:2410.22284 — closest prior work; same encoder, mean-pooled, supervised
