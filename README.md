@@ -128,7 +128,6 @@ At 30% escalation: scanner catches 52% of injections, reduces judge API calls by
 │   ├── eval_asr.py                Attack success rate at operating thresholds
 │   └── eval_public_benchmarks.py  Zero-shot eval on BIPIA, deepset, xTRam1
 ├── results/                       Experiment outputs (JSON)
-├── notebooks/                     Exploratory analysis and statistical visualization
 ├── llm.py                         Minimal Anthropic client (used by eval_document_level.py)
 └── pyproject.toml
 ```
