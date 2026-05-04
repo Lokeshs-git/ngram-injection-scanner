@@ -2,13 +2,13 @@
 
 Zero-shot prompt injection detection using per-token hidden states from a frozen sentence transformer. No labeled data. No fine-tuning. ~44ms per chunk on CPU.
 
-**Key result:** AUC 0.901 on a controlled benchmark — non-overlapping bootstrap CIs versus the mean-pool baseline (0.808). On the public xTRam1 dataset, zero-shot AUC 0.870 exceeds the supervised baseline of 0.764 from prior work trained on labeled injection data.
+**Key result:** AUC 0.901 on a controlled benchmark - non-overlapping bootstrap CIs versus the mean-pool baseline (0.808). On the public xTRam1 dataset, zero-shot AUC 0.870 exceeds the supervised baseline of 0.764 from prior work trained on labeled injection data.
 
 ---
 
 ## The Problem
 
-RAG pipelines are vulnerable to prompt injection: an attacker embeds hidden instructions inside a retrieved document to hijack the LLM's behavior. The standard embedding-based detector compares a mean-pooled chunk vector to known threat references. This fails against obfuscated injections — when a short malicious span is surrounded by long benign text, mean pooling *averages out* the threat signal. We call this **semantic dilution**.
+RAG pipelines are vulnerable to prompt injection: an attacker embeds hidden instructions inside a retrieved document to hijack the LLM's behavior. The standard embedding-based detector compares a mean-pooled chunk vector to known threat references. This fails against obfuscated injections when a short malicious span is surrounded by long benign text, mean pooling *averages out* the threat signal. We call this **semantic dilution**.
 
 ```
 Document chunk (500 chars):
@@ -95,7 +95,7 @@ N-gram consistently outperforms global across all three domains. Wikipedia (avg.
 | deepset | 116 | 0.642 | AUC=0.764 (Ayub & Majumdar 2024, trained) |
 | **xTRam1** | **2,060** | **0.870** | **AUC=0.764 (Ayub & Majumdar 2024, trained)** |
 
-On xTRam1, our zero-shot scanner exceeds the prior supervised baseline trained on labeled injection data. The BIPIA gap is expected — that baseline was trained on the exact evaluation distribution.
+On xTRam1, our zero-shot scanner exceeds the prior supervised baseline trained on labeled injection data. The BIPIA gap is expected as that baseline was trained on the exact evaluation distribution.
 
 ### Scanner as first-pass filter (Stack Overflow)
 
