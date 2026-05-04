@@ -1,0 +1,31 @@
+{
+  "hardware": "CPU",
+  "model": "all-MiniLM-L6-v2",
+  "chunk_size_chars": 500,
+  "n_warmup": 20,
+  "n_runs": 200,
+  "global_embedding": {
+    "mean_ms": 44.854,
+    "median_ms": 41.032,
+    "p95_ms": 63.984,
+    "p99_ms": 81.089,
+    "std_ms": 10.48,
+    "n_runs": 200
+  },
+  "token_level": {
+    "mean_ms": 45.498,
+    "median_ms": 41.656,
+    "p95_ms": 68.753,
+    "p99_ms": 85.356,
+    "std_ms": 10.573,
+    "n_runs": 200
+  },
+  "ngram_n5": {
+    "mean_ms": 43.916,
+    "median_ms": 41.974,
+    "p95_ms": 56.203,
+    "p99_ms": 68.03,
+    "std_ms": 8.603,
+    "n_runs": 200
+  }
+}

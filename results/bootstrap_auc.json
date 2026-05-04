@@ -1,0 +1,27 @@
+{
+  "dataset": {
+    "n_emails": 100,
+    "chunk_size": 500,
+    "n_chunks": 1575,
+    "n_poisoned": 100,
+    "seed": 42
+  },
+  "global_embedding": {
+    "point_estimate": 0.8076,
+    "ci_lower_95": 0.7621,
+    "ci_upper_95": 0.8489,
+    "n_bootstrap": 1000
+  },
+  "token_level": {
+    "point_estimate": 0.8882,
+    "ci_lower_95": 0.8561,
+    "ci_upper_95": 0.9189,
+    "n_bootstrap": 1000
+  },
+  "ngram_n5": {
+    "point_estimate": 0.9011,
+    "ci_lower_95": 0.8689,
+    "ci_upper_95": 0.9304,
+    "n_bootstrap": 1000
+  }
+}

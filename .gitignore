@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.uv/
+*.egg-info/
+
+# Secrets
+.env
+.env.local
+
+# Large generated files
+results/main_evaluation.json
+results/raw_embedding_scores.csv
+notebooks/embeddings_cache.db
+
+# Jupyter
+.ipynb_checkpoints/
+.jupyter/
+
+# IDE
+.vscode/
+.idea/
+.DS_Store
+
+# Ruff
+.ruff_cache/

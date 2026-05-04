@@ -1,0 +1,35 @@
+[project]
+name = "ngram-injection-scanner"
+version = "0.1.0"
+description = "Zero-shot prompt injection detection via N-gram pooling of token-level hidden states"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "anthropic>=0.40.0",
+    "datasets>=3.0.0",
+    "numpy>=1.26.0",
+    "python-dotenv>=1.0.1",
+    "scikit-learn>=1.5.0",
+    "sentence-transformers>=3.0.0",
+    "torch>=2.1.0",
+    "tqdm>=4.66.0",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.29.0",
+    "jupyterlab>=4.3.0",
+    "ruff>=0.7.0",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "W", "F", "I", "B", "C4", "UP", "RUF"]
+ignore = ["E501"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"

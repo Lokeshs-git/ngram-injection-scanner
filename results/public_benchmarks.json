@@ -1,0 +1,77 @@
+{
+  "scanner_model": "all-MiniLM-L6-v2",
+  "n_reference_phrases": 10,
+  "ngram_n": 5,
+  "evaluation": "zero-shot \u2014 no training on any injection dataset",
+  "datasets": {
+    "bipia": {
+      "n_samples": 1000,
+      "n_injections": 500,
+      "supervised_baseline": "Alamsabi et al. (MDPI 2026): F1=0.977, XGBoost + OpenAI emb (trained on this data)",
+      "latency_per_sample_ms": 241.55,
+      "methods": {
+        "global": {
+          "auc": 0.6041,
+          "best_f1": 0.6685,
+          "best_f1_threshold": 0.034902
+        },
+        "token_level": {
+          "auc": 0.5905,
+          "best_f1": 0.6816,
+          "best_f1_threshold": 0.188145
+        },
+        "ngram_n5": {
+          "auc": 0.6413,
+          "best_f1": 0.6905,
+          "best_f1_threshold": 0.175277
+        }
+      }
+    },
+    "deepset": {
+      "n_samples": 116,
+      "n_injections": 60,
+      "supervised_baseline": "Ayub & Majumdar (arXiv:2410.22284): AUC=0.764, F1=0.867, RF + OpenAI emb",
+      "latency_per_sample_ms": 55.5,
+      "methods": {
+        "global": {
+          "auc": 0.544,
+          "best_f1": 0.6818,
+          "best_f1_threshold": 0.01508
+        },
+        "token_level": {
+          "auc": 0.6107,
+          "best_f1": 0.6818,
+          "best_f1_threshold": 0.1089
+        },
+        "ngram_n5": {
+          "auc": 0.6423,
+          "best_f1": 0.6946,
+          "best_f1_threshold": 0.137422
+        }
+      }
+    },
+    "xTRam1": {
+      "n_samples": 2060,
+      "n_injections": 650,
+      "supervised_baseline": "Ayub & Majumdar (arXiv:2410.22284): AUC=0.764, F1=0.867, RF + OpenAI emb",
+      "latency_per_sample_ms": 196.52,
+      "methods": {
+        "global": {
+          "auc": 0.913,
+          "best_f1": 0.7474,
+          "best_f1_threshold": 0.218273
+        },
+        "token_level": {
+          "auc": 0.8048,
+          "best_f1": 0.6589,
+          "best_f1_threshold": 0.289526
+        },
+        "ngram_n5": {
+          "auc": 0.8703,
+          "best_f1": 0.7156,
+          "best_f1_threshold": 0.298279
+        }
+      }
+    }
+  }
+}

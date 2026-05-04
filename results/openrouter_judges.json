@@ -1,0 +1,84 @@
+{
+  "gemma-3-27b": {
+    "enron": {
+      "model_id": "google/gemma-3-27b-it",
+      "auc": 0.9168,
+      "n_errors": 1,
+      "latency": {
+        "mean_ms": 1025.18,
+        "median_ms": 800.92,
+        "p95_ms": 1767.99
+      },
+      "input_tokens": 206055,
+      "output_tokens": 1493,
+      "cost_usd": 0.020904
+    },
+    "stackoverflow": {
+      "model_id": "google/gemma-3-27b-it",
+      "auc": 0.946,
+      "n_errors": 1,
+      "latency": {
+        "mean_ms": 827.56,
+        "median_ms": 666.35,
+        "p95_ms": 1599.03
+      },
+      "input_tokens": 113093,
+      "output_tokens": 1492,
+      "cost_usd": 0.011608
+    },
+    "wikipedia": {
+      "model_id": "google/gemma-3-27b-it",
+      "auc": 0.5208,
+      "n_errors": 0,
+      "latency": {
+        "mean_ms": 1375.51,
+        "median_ms": 1126.01,
+        "p95_ms": 2625.54
+      },
+      "input_tokens": 632337,
+      "output_tokens": 1514,
+      "cost_usd": 0.063537
+    }
+  },
+  "deepseek-chat": {
+    "enron": {
+      "model_id": "deepseek/deepseek-chat",
+      "auc": 0.874,
+      "n_errors": 0,
+      "latency": {
+        "mean_ms": 1066.92,
+        "median_ms": 754.44,
+        "p95_ms": 1917.74
+      },
+      "input_tokens": 200596,
+      "output_tokens": 1204,
+      "cost_usd": 0.055485
+    },
+    "stackoverflow": {
+      "model_id": "deepseek/deepseek-chat",
+      "auc": 0.972,
+      "n_errors": 0,
+      "latency": {
+        "mean_ms": 1122.64,
+        "median_ms": 1148.44,
+        "p95_ms": 1994.21
+      },
+      "input_tokens": 108655,
+      "output_tokens": 1278,
+      "cost_usd": 0.030743
+    },
+    "wikipedia": {
+      "model_id": "deepseek/deepseek-chat",
+      "auc": 0.7296,
+      "n_errors": 0,
+      "latency": {
+        "mean_ms": 1406.44,
+        "median_ms": 1418.06,
+        "p95_ms": 2658.48
+      },
+      "input_tokens": 610681,
+      "output_tokens": 1245,
+      "cost_usd": 0.166253
+    }
+  }
+}
